@@ -1,0 +1,7 @@
+.product-item {
+  border:1px solid transparent;
+  &:hover {
+    border:1px solid #ddd;
+    box-shadow: 3px 3px 6px #ddd;
+  }
+}

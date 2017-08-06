@@ -1,0 +1,38 @@
+{
+  "name": "millienenterprises",
+  "version": "1.0.0",
+  "description": "Static Website for Millien Enterprises",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "serve": "gulp serve"
+  },
+  "keywords": [
+    "millien",
+    "enterprises",
+    "static",
+    "website"
+  ],
+  "author": "Sabin Raj DANGOL",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.12",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1"
+  },
+  "dependencies": {
+    "gmaps": "^0.4.24",
+    "owl.carousel": "^2.2.0"
+  }
+}

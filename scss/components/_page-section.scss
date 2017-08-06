@@ -1,0 +1,23 @@
+.page-section {
+  padding: 50px 0 20px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font: {
+      family: $header-font;
+      weight: bold;
+    }
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.page-section.grey-shade {
+  background-color: #f4f4f4;
+}
+
+
+
+.page-section.page-section-map {
+  min-height: 400px;
+}

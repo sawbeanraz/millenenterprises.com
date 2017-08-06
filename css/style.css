@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&subset=devanagari,latin-ext");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: all .3s ease-in-out;
+  border-radius: 0;
+  z-index: 9999;
+}
+
+.navbar-main.affix {
+  background-color: #19505B;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-main .navbar-collapse {
+  float: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-main .navbar-collapse {
+    float: right;
+  }
+}
+
+a.navbar-brand {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  display: block;
+  height: auto;
+}
+
+a.navbar-brand:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+a.navbar-brand img {
+  display: inline-block;
+  height: 52px;
+}
+
+@media (max-width: 991px) {
+  a.navbar-brand {
+    font-size: 20px;
+  }
+  a.navbar-brand img {
+    height: 28px;
+  }
+}
+
+.navbar-main ul.navbar-nav {
+  margin-top: 18px;
+}
+
+.navbar-main ul.navbar-nav li a {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar-main ul.navbar-nav li a:hover, .navbar-main ul.navbar-nav li a:focus {
+  background: transparent;
+  color: #fefefe;
+  border-bottom-color: #fefefe;
+}
+
+@media (max-width: 991px) {
+  .navbar-main ul.navbar-nav {
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-main ul.navbar-nav {
+    margin-top: 0;
+    background-color: #19505B;
+  }
+  .navbar-main ul.navbar-nav li a {
+    color: #fff;
+    background-color: #19505B;
+    border: 1px solid transparent;
+  }
+  .navbar-main ul.navbar-nav li a:hover, .navbar-main ul.navbar-nav li a:focus {
+    background: #19505B;
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
+
+.navbar-toggle {
+  border: 1px solid #fff;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.page-section {
+  padding: 50px 0 20px;
+}
+
+.page-section h1, .page-section h2, .page-section h3, .page-section h4, .page-section h5, .page-section h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.page-section.grey-shade {
+  background-color: #f4f4f4;
+}
+
+.page-section.page-section-map {
+  min-height: 400px;
+}
+
+.product-item {
+  border: 1px solid transparent;
+}
+
+.product-item:hover {
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 6px #ddd;
+}
+
+.product-article {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.product-article .product-image {
+  padding: 0 80px;
+  text-align: center;
+}
+
+.product-article .product-image img {
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+}
+
+.product-article .product-text {
+  padding-top: 20px;
+}
+
+.footer {
+  background-color: #113239;
+  color: #fff;
+}
+
+.footer .footer-logo {
+  text-align: center;
+}
+
+.footer .footer-logo img {
+  width: 150px;
+}
+
+.footer > .container {
+  padding: 40px 0;
+}
+
+.footer .copyright {
+  background-color: #0A292F;
+  padding: 14px 0;
+}
