@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+body {
+  background-color: red;
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+  "variables",
+  "base",
+  "bootstrap44",
+  "fontawesome",
+  "navigation",
+  "page-section",
+  "product-carousel",
+  "product-article",
+  "footer";

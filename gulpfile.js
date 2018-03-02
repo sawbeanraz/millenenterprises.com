@@ -1,135 +1,69 @@
-var gulp = require('gulp'),
-    watch = require('gulp-watch'),
-    scss = require('gulp-sass'),
-    minify = require('gulp-cssnano'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    inject = require('gulp-inject'),
-    sync = require('browser-sync').create(),
-    uglify = require('gulp-uglify');
+var basePaths = { 
+    base: './',
+    node: './node_modules/',
+    sass: './_sass/',
+    js: './js/libs/'
+}
+
+
+var gulp = require('gulp');
+var del = require('del');
 
 
 
-
-gulp.task('serve', function() {
-  sync.init({
-    server: {
-      baseDir: './'
-    },
-    open: false,
-    notify: true
-  });
-
-  watch('./scss/**/*.scss', function(done) {
-    gulp.start('scss');
-  });
-  watch('./*.html').on('change', sync.reload);
+gulp.task('clean-libs', function() {
+    return(del[basePaths.sass + 'libs/**/*']);
 });
 
 
+gulp.task('copy-libs', ['clean-libs'], function() {
 
 
 
-gulp.task('scss', function(done) {
-  console.log('Starting SCSS');
-  gulp.src('./scss/**/*.scss')
-    .pipe(scss({
-      outputStyle: 'expanded'
-    })).on('error', scss.logError)
-    .pipe(rename('style.css'))
-    .pipe(gulp.dest('./css/'))
-    .pipe(sync.stream());
-
-  console.log('Complete SCSS');
-  done();
-});
-
-gulp.task('default', ['serve']);
+//Copy all bootstrap SCSS files and javascript files
+var stream = gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
+  .pipe(gulp.dest(basePaths.sass + 'libs/bootstrap4'));
+gulp.src([
+    basePaths.node + 'bootstrap/dist/js/bootstrap.min.js',
+    basePaths.node + 'bootstrap/dist/js/bootstrap.min.js.map'
+]).pipe(gulp.dest(basePaths.js));
 
 
+// //Copy Scrollpos - Styler
+// gulp.src(basePaths.node + 'scrollpos-styler/scrollPosStyler.js')
+//     .pipe(gulp.dest(basePaths.js));
 
 
 
 
-
-
-
-
-
+//Font Awesome
+gulp.src(basePaths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}')
+    .pipe(gulp.dest(basePaths.base + 'fonts'));
+gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
+  .pipe(gulp.dest(basePaths.sass + 'libs/font-awesome'));
 
 
 
 
 
+// //Fancy Box
+// gulp.src(basePaths.node + 'fancybox/dist/js/jquery.fancybox.js')
+//     .pipe(gulp.dest(basePaths.js));
+// gulp.src(basePaths.node + 'fancybox/dist/scss/jquery.fancybox.scss')
+//     .pipe(gulp.dest(basePaths.sass + 'libs/fancybox'))
 
 
+//Popper
+gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
+    .pipe(gulp.dest(basePaths.js));
 
 
+//JQuery
+gulp.src(basePaths.node + 'jquery/dist/jquery.js')
+    .pipe(gulp.dest(basePaths.js));
 
 
+//Copy all SCSS file from requried node modules
+return stream;
 
-
-
-
-
-var css = [
-  'node_modules/bootstrap/dist/css/bootstrap.css',
-  'node_modules/font-awesome/css/font-awesome.css',
-  'node_modules/owl.carousel/dist/assets/owl.carousel.css',
-  'css/style.css'
-];
-var js = [
-  'node_modules/jquery/dist/jquery.js',
-  'node_modules/bootstrap/dist/js/bootstrap.js',
-  'node_modules/owl.carousel/dist/owl.carousel.js',
-  'node_modules/gmaps/gmaps.js',
-  'js/main.js'
-];
-
-gulp.task('build:js', function(cb) {
-  gulp.src(js)
-    .pipe(concat('bundle.js'))
-    .pipe(uglify().on('error', function(e) {
-      console.log(e);
-    }))
-    .pipe(gulp.dest('./dist/js/'));
-  cb();
-});
-
-gulp.task('build:scss', function(cb) {
-  gulp.src('./scss/**/*.scss')
-    .pipe(scss({
-      outputStyle: 'expanded'
-    }))
-    .pipe(rename('style.css'))
-    .pipe(gulp.dest('./css/'));
-  cb();
-});
-
-gulp.task('build:css', ['build:scss'], function(cb) {
-  gulp.src(css)
-    .pipe(concat('bundle.css'))
-    .pipe(minify())
-    .pipe(gulp.dest('./dist/css/'));
-  cb();
-});
-
-
-gulp.task('copy:images', function(done) {
-  gulp.src([
-    './images/**/*'
-  ], {base: '.'})
-    .pipe(gulp.dest('./dist/'));
-  done();
-});
-
-
-gulp.task('build', ['build:css', 'build:js', 'copy:images'], function() {
-  gulp.src('./*.html', {base: '.'})
-    .pipe(inject(
-      gulp.src([
-        './dist/css/bundle.css',
-        './dist/js/bundle.js'
-      ], { relative: true }, { read: false })))
-    .pipe(gulp.dest('./dist/'));
 });
