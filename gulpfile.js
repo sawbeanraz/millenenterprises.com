@@ -2,7 +2,7 @@ var basePaths = {
     base: './',
     node: './node_modules/',
     sass: './_sass/',
-    js: './js/libs/'
+    js: './assets/js/libs/'
 }
 
 
@@ -29,9 +29,9 @@ gulp.src([
 ]).pipe(gulp.dest(basePaths.js));
 
 
-// //Copy Scrollpos - Styler
-// gulp.src(basePaths.node + 'scrollpos-styler/scrollPosStyler.js')
-//     .pipe(gulp.dest(basePaths.js));
+//Copy Scrollpos - Styler
+gulp.src(basePaths.node + 'scrollpos-styler/scrollPosStyler.js')
+    .pipe(gulp.dest(basePaths.js));
 
 
 
