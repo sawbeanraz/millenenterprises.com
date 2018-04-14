@@ -58,6 +58,13 @@ gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
     .pipe(gulp.dest(basePaths.js));
 
 
+//Owl Carousel
+gulp.src(basePaths.node + 'owl.carousel/dist/owl.carousel.js')
+    .pipe(gulp.dest(basePaths.js));
+gulp.src(basePaths.node + 'owl.carousel/src/scss/**/*.scss')
+    .pipe(gulp.dest(basePaths.sass + 'libs/owl.carousel'));
+
+
 //JQuery
 gulp.src(basePaths.node + 'jquery/dist/jquery.js')
     .pipe(gulp.dest(basePaths.js));

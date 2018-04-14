@@ -26,4 +26,13 @@ $(function() {
     }, 100);
   }
 
+  $('#productCarousel').owlCarousel({
+    center: true,
+    loop: true,
+    autoWidth: true,
+    margin: 20
+  });
+
+
+
 });
