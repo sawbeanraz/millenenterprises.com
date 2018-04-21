@@ -1,26 +1,51 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Millenenterprise.com Website
+The site has been migrated gulp to gatsbyjs static site.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
-## Install
+
+## Requirement 
+
+
+### Node.js
+Nodejs is required to be installed.
+
+### npm or yarn
+Require npm or yarn for packages to be installed.
+
+### Gatsby CLI
+Require gatsby js to run development and/or build
 
 Make sure that you have the Gatsby CLI program installed:
 ```sh
 npm install --global gatsby-cli
 ```
 
-And run from your CLI:
+
+## Quick Start
+
+
+Clone project from github.com
+
 ```sh
-gatsby new gatsby-example-site
+git clone https://github.com/sawbeanraz/millenenterprises.com.git
 ```
 
-Then you can run it by:
+Go into directory
+
 ```sh
-cd gatsby-example-site
+cd millenenterprises.com
+yarn develop
+```
+or
+```sh
+cd millenenterprises.com
 npm run develop
 ```
 
-## Deploy
+## Build
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Build the project for deploy.
+
+```sh
+gatsby build
+```
