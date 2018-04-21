@@ -1,38 +1,31 @@
 {
-  "name": "millenenterprises.com",
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
   "version": "1.0.0",
-  "description": "Main website for millenenterprises",
-  "main": "index.html",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "del": "^3.0.0",
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "jquery": "^3.3.1",
-    "owl.carousel": "^2.3.3",
-    "popper.js": "^1.12.9",
-    "scrollpos-styler": "^0.7.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sawbeanraz/millenenterprises.com.git"
+    "bootstrap": "^4.1.0",
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-source-filesystem": "^1.5.33",
+    "gatsby-transformer-remark": "^1.7.40",
+    "react-helmet": "^5.2.0",
+    "react-slick": "^0.23.1",
+    "slick-carousel": "^1.8.1"
   },
   "keywords": [
-    "jekyll",
-    "bootstrap4",
-    "scss",
-    "sass",
-    "npm",
-    "gulp"
+    "gatsby"
   ],
-  "author": "Sabin Raj DANGOL",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sawbeanraz/millenenterprises.com/issues"
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/sawbeanraz/millenenterprises.com#readme"
+  "devDependencies": {
+    "prettier": "^1.12.0"
+  }
 }
