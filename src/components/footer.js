@@ -4,7 +4,7 @@ import logoImage from '../assets/images/logo-white.svg'
 
 
 const Footer = () => (
-    <div className='footer'>
+    <div className='footer' id='contact'>
       <div className='container'>
 
         <div className='row'>

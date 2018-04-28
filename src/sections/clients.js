@@ -22,7 +22,7 @@ const clients = [{
 
 
 const Clients = () => (  
-  <section className={true?'page-section grey':'page-section'}>
+  <section className={false?'page-section grey':'page-section'}>
     <div className="container">
       <h1>Our Clients</h1>
       <Carousel items={clients} />
