@@ -15,3 +15,44 @@
   }
 
 }
+
+
+
+/**
+ * navigation bar logo link and image 
+ */
+
+
+.nav-logo-link {
+  color: #fff;
+  text-decoration: none;  
+  font: {
+    size: 32px;
+    weight: bold;
+  }
+
+  img {
+    max-height: 52px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+
+/**
+ * Navigation Items */
+
+.nav-item {
+  margin-top: 18px;  
+  margin-bottom: 18px;
+  color: #fff;
+
+  &:hover, &:focus { 
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+}

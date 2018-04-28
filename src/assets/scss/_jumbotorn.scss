@@ -1,0 +1,15 @@
+.jumbotorn {
+  overflow: hidden;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  display: table;
+  width: 100%;
+
+  .content {
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff
+  }
+}
