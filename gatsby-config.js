@@ -20,4 +20,5 @@ module.exports = {
       }
     }
   ],
+  pathPrefix: '/millenenterprises.com'
 }
