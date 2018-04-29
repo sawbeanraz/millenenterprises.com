@@ -4,7 +4,7 @@ module.exports = {
     menu: [
       { key: 'home', title: 'Home', url: '/#home' }  ,
       { key: 'about', title: 'About', url: '/#about' },
-      { key: 'product', title: 'Products', url: '/#products' },
+      { key: 'product', title: 'Products', url: '/products' },
       { key: 'contact', title: 'Contact', url: '/#contact' }
     ]
   },
