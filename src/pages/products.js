@@ -57,7 +57,7 @@ query  ProductQuery {
         }
         frontmatter {
           title
-          image          
+          image       
         }
         excerpt
         html
