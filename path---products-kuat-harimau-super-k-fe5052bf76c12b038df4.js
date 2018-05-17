@@ -1,2 +1,2 @@
-webpackJsonp([0xb994f60b97ed],{364:function(t,p){t.exports={pathContext:{slug:"/products/kuat-harimau-super-k/"}}}});
+webpackJsonp([0xb994f60b97ed],{366:function(t,p){t.exports={pathContext:{slug:"/products/kuat-harimau-super-k/"}}}});
 //# sourceMappingURL=path---products-kuat-harimau-super-k-fe5052bf76c12b038df4.js.map

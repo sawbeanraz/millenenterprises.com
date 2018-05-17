@@ -1,20 +1,20 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-d41ab1e979bd2158d895.js",
-      "component---src-pages-index-js-d41ab1e979bd2158d895.js.map"
+      "component---src-pages-index-js-8e047643087d332f84f5.js",
+      "component---src-pages-index-js-8e047643087d332f84f5.js.map"
     ],
     "path---products": [
-      "path---products-542aa80daec56273858e.js",
-      "path---products-542aa80daec56273858e.js.map"
+      "path---products-75be3c24ad8ca3c0319f.js",
+      "path---products-75be3c24ad8ca3c0319f.js.map"
     ],
     "path---": [
-      "path----da6951293ad126dee0f7.js",
-      "path----da6951293ad126dee0f7.js.map"
+      "path----9d14284c9e255184114c.js",
+      "path----9d14284c9e255184114c.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-fca3e850deefbccdfdda.js",
-      "component---src-layouts-index-js-fca3e850deefbccdfdda.js.map"
+      "component---src-layouts-index-js-c64992e0dec759b705d3.js",
+      "component---src-layouts-index-js-c64992e0dec759b705d3.js.map"
     ],
     "component---src-templates-product-js": [
       "component---src-templates-product-js-517e570f413a69c71f86.js",
@@ -40,6 +40,10 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---products-ava-softner": [
+      "path---products-ava-softner-3dcaf9172bc20fc9db0c.js",
+      "path---products-ava-softner-3dcaf9172bc20fc9db0c.js.map"
+    ],
     "path---products-k-1000-plus": [
       "path---products-k-1000-plus-387af147f05818b7951f.js",
       "path---products-k-1000-plus-387af147f05818b7951f.js.map"
@@ -57,12 +61,12 @@
       "path---products-mindnspiritdishwash-7f226b6f24a231c1d383.js.map"
     ],
     "app": [
-      "app-916c1b3e5586247ab891.js",
-      "app-916c1b3e5586247ab891.js.map"
+      "app-da5bce3f0c7a4592a23b.js",
+      "app-da5bce3f0c7a4592a23b.js.map"
     ],
     "component---src-pages-products-js": [
-      "component---src-pages-products-js-3e2dd6895607a720e248.js",
-      "component---src-pages-products-js-3e2dd6895607a720e248.js.map"
+      "component---src-pages-products-js-b9ad827d6060dce661fa.js",
+      "component---src-pages-products-js-b9ad827d6060dce661fa.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
