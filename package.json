@@ -13,6 +13,7 @@
     "gatsby-transformer-remark": "^1.7.40",
     "google-map-react": "^1.0.0",
     "prop-types": "^15.6.1",
+    "react-anchor-link-smooth-scroll": "^1.0.9",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

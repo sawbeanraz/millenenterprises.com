@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import logo from '../assets/images/logo-white.svg';
 
@@ -35,10 +36,15 @@ export default class Header extends React.Component {
             {this.props.siteMenu?
             <div className="col-5 pt-3 pb-3 d-flex flex-column flex-md-row justify-content-between">
               {this.props.siteMenu.map((item) => (          
+                (item.type == 'link')?
                 <Link key={item.key} to={item.url}
                   className='nav-item'>
                   {item.title}
-                </Link>
+                </Link>:<AnchorLink 
+                  offset={100}
+                  className='nav-item' 
+                  key={item.key} 
+                  href={item.url}>{item.title}</AnchorLink>
               ))}
             </div>:undefined}
           </div>

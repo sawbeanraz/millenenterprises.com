@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'Millen Enterprises',
     menu: [
-      { key: 'home', title: 'Home', url: '/#home' }  ,
-      { key: 'about', title: 'About', url: '/#about' },
-      { key: 'product', title: 'Products', url: '/products' },
-      { key: 'contact', title: 'Contact', url: '/#contact' }
+      { key: 'home', title: 'Home', url: '#home', type: 'scroll-link' }  ,
+      { key: 'about', title: 'About', url: '#about', type: 'scroll-link' },
+      { key: 'product', title: 'Products', url: '/products', type: 'link' },
+      { key: 'contact', title: 'Contact', url: '#contact', type: 'scroll-link' }
     ]
   },
   plugins: [

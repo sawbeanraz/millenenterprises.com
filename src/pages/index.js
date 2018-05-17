@@ -19,7 +19,8 @@ const IndexPage = () => (
 
     <Jumbotorn image={heroImage}
       title="Kuat Harimau"
-      text="Delivered by Millen Enterprises"/>
+      text="Delivered by Millen Enterprises"
+      id='home' />
 
     <SectionText title="About" 
       content='

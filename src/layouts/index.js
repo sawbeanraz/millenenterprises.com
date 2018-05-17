@@ -11,8 +11,8 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'millen enterprises' },
+        { name: 'keywords', content: 'kuat harimau, millenenterprises' },
       ]}
     />
     <Header 
@@ -42,7 +42,8 @@ export const query = graphql`
         menu {
           key,
           title,
-          url
+          url,
+          type
         }
       }
     }

@@ -14,7 +14,8 @@ const Products = ({data}) => {
   <div>
     <Jumbotorn image={heroImage}
       title="Products"
-      text="Our products"/>
+      text="Our products"
+      id='home' />
 
     <section className='page-section' id='products'>
       <div className="container">
