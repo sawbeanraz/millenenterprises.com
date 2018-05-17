@@ -24,9 +24,13 @@ const IndexPage = () => (
 
     <SectionText title="About" 
       content='
-      <p>Official dealer for Kuat-Harimau in Nepal.</p>
-      <p><strong>Millien Enterprises</strong> offers highest levels of service to our valued customer. Whether you are a small shop or big supermarket, you can be 
-        confident of getting quick and quality service.</p>' id='about' />
+      <p>Official dealer for Kuat-Harimau in Nepal</p>
+      <p>
+        <strong>Millien Enterprises</strong> offers highest levels 
+        of service to our valued customer. Whether you are a small 
+        shop or big supermarket, you can be confident of getting 
+        quick and quality service.
+      </p>' id='about' />
     <Featured />
     <Map/>
     <Clients />
