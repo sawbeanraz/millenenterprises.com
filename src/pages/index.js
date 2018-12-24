@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 
+import Layout from "../components/layout"
 import Jumbotorn from "../components/jumbotron"
 import SectionText from '../components/section-text'
 
@@ -15,8 +16,7 @@ import Map from '../sections/map'
 
 
 const IndexPage = () => (
-  <div>
-
+  <Layout>
     <Jumbotorn image={heroImage}
       title="Kuat Harimau"
       text="Delivered by Millen Enterprises"
@@ -34,8 +34,7 @@ const IndexPage = () => (
     <Featured />
     <Map/>
     <Clients />
-
-  </div>
+  </Layout>
 )
 
 export default IndexPage

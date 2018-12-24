@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Link from 'gatsby-link'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
