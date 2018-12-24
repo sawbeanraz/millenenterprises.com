@@ -4,16 +4,18 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.1.0",
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-source-filesystem": "^1.5.33",
-    "gatsby-transformer-remark": "^1.7.40",
-    "google-map-react": "^1.0.0",
-    "prop-types": "^15.6.1",
-    "react-anchor-link-smooth-scroll": "^1.0.9",
+    "bootstrap": "^4.2.1",
+    "gatsby": "^2.0.76",
+    "gatsby-link": "^2.0.7",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sass": "^2.0.7",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.17",
+    "google-map-react": "^1.1.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -28,7 +30,7 @@
     "deploy": "gatsby build && echo \"millenenterprises.com\" > ./public/CNAME && gh-pages -d public"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "prettier": "^1.12.0"
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.15.3"
   }
 }
