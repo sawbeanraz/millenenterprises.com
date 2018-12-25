@@ -36,7 +36,7 @@ export default class Header extends React.Component {
             {this.props.siteMenu?
             <div className="col-5 pt-3 pb-3 d-flex flex-column flex-md-row justify-content-between">
               {this.props.siteMenu.map((item) => (          
-                (item.type == 'link')?
+                (item.type === 'link')?
                 <Link key={item.key} to={item.url}
                   className='nav-item'>
                   {item.title}
