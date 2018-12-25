@@ -14,18 +14,19 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-          cssLoaderOptions: {
+        cssLoaderOptions: {
           camelCase: false,
         },
       },
-    }, 
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/`
-      }
-    }
+        path: `${__dirname}/src/`,
+      },
+    },
+    'gatsby-plugin-eslint',
   ],
-  pathPrefix: '/millenenterprises.com'
-}
+  pathPrefix: '/millenenterprises.com',
+};
