@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-const SectionText = ({id, title, content, shaded}) => (
-
-
-
-  <section className={shaded?'page-section grey':'page-section'} id={id}>
+const SectionText = ({
+  id,
+  title,
+  content,
+  shaded,
+}) => (
+  <section className={shaded ? 'page-section grey' : 'page-section'} id={id}>
     <div className="container">
       <h1>{title}</h1>
-      <div dangerouslySetInnerHTML = {{ __html: content}} />
+      <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   </section>
-)
+);
 
 SectionText.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  shaded: PropTypes.bool
-}
+  shaded: PropTypes.bool.isRequired,
+};
 
 export default SectionText;

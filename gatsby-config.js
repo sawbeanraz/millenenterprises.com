@@ -2,11 +2,31 @@ module.exports = {
   siteMetadata: {
     title: 'Millen Enterprises',
     menu: [
-      { key: 'home', title: 'Home', url: '#home', type: 'scroll-link' }  ,
-      { key: 'about', title: 'About', url: '#about', type: 'scroll-link' },
-      { key: 'product', title: 'Products', url: '/products', type: 'link' },
-      { key: 'contact', title: 'Contact', url: '#contact', type: 'scroll-link' }
-    ]
+      {
+        key: 'home',
+        title: 'Home',
+        url: '#home',
+        type: 'scroll-link',
+      },
+      {
+        key: 'about',
+        title: 'About',
+        url: '#about',
+        type: 'scroll-link',
+      },
+      {
+        key: 'product',
+        title: 'Products',
+        url: '/products',
+        type: 'link',
+      },
+      {
+        key: 'contact',
+        title: 'Contact',
+        url: '#contact',
+        type: 'scroll-link',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -26,7 +46,17 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    'gatsby-plugin-eslint',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|cache|public)/,
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
   ],
   pathPrefix: '/millenenterprises.com',
 };

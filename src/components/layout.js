@@ -1,15 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-
-import Header from '../components/header'
-import Footer from '../components/footer'
-import '../assets/scss/index.scss'
-import { StaticQuery, graphql } from "gatsby"
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import Header from './header';
+import Footer from './footer';
+import '../assets/scss/index.scss';
 
 const Layout = ({ children }) => (
   <StaticQuery
-     query={graphql`
+    query={graphql`
        query LayoutQuery {
          site {
            siteMetadata {
@@ -24,27 +23,28 @@ const Layout = ({ children }) => (
          }
        }
     `}
-     render={({ site })=> (
-       <>
-         <Helmet
+    render={({ site }) => (
+      <Fragment>
+        <Helmet
           defaultTitle={site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'millen enterprises' },
             { name: 'keywords', content: 'kuat harimau, millenenterprises' },
           ]}
         />
-        <Header 
-          siteTitle={ site.siteMetadata.title }
-          siteMenu = { site.siteMetadata.menu } />
-          {children}
+        <Header
+          siteTitle={site.siteMetadata.title}
+          siteMenu={site.siteMetadata.menu}
+        />
+        {children}
         <Footer />
-       </>
-     )}
-   />
+      </Fragment>
+    )}
+  />
 );
 
 Layout.propTypes = {
-  children: PropTypes.func,
-}
+  children: PropTypes.node.isRequired,
+};
 
-export default Layout
+export default Layout;
