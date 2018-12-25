@@ -28,7 +28,7 @@ const Footer = () => (
           </div>
           <div>
             <a href="mailto:sushila.maharjan@gmail.com">
-              sushila.maharjanp@gmail.com
+              sushila.maharjan@gmail.com
             </a>
           </div>
         </div>
