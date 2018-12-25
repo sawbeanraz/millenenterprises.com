@@ -13,23 +13,29 @@ const Layout = ({ children }) => (
        query LayoutQuery {
          site {
            siteMetadata {
-             title
+             title,
+             menu {
+               key
+               title
+               url
+               type
+             }
            }
          }
        }
     `}
-     render={data => (
+     render={({ site })=> (
        <>
          <Helmet
-          defaultTitle={data.site.siteMetadata.title}
+          defaultTitle={site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'millen enterprises' },
             { name: 'keywords', content: 'kuat harimau, millenenterprises' },
           ]}
         />
         <Header 
-          siteTitle={ data.site.siteMetadata.title }
-          siteMenu = { data.site.siteMetadata.menu } />
+          siteTitle={ site.siteMetadata.title }
+          siteMenu = { site.siteMetadata.menu } />
           {children}
         <Footer />
        </>
