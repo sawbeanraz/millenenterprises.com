@@ -30,7 +30,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -46,6 +45,9 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-eslint',
       options: {

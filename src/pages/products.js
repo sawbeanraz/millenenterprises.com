@@ -29,11 +29,20 @@ const Products = () => (
                     }
                     frontmatter {
                       title
-                      image       
+                      image {
+                        childImageSharp {
+                          small: fluid(maxWidth: 292, maxHeight: 292) {
+                            src
+                            srcSet
+                            aspectRatio
+                            sizes
+                            tracedSVG
+                          }
+                        }
+                      }
                     }
                     excerpt
-                    html
-                    timeToRead
+                    html 
                   }
                 }
               }
@@ -58,7 +67,7 @@ const Products = () => (
                     className="featurette-image img-thumbnail mx-auto"
                     data-src="holder.js/500x500/auto"
                     alt={node.frontmatter.title}
-                    src={node.frontmatter.image}
+                    src={node.frontmatter.image.childImageSharp.small.src}
                     data-holder-rendered="true"
                     style={{ maxWeight: '500px', maxHeight: '500px' }}
                   />
