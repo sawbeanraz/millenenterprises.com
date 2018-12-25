@@ -1,2 +1,0 @@
-webpackJsonp([0x7d2399b50310],{217:function(e,t,u){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var l=u(1),r=n(l),a=function(){return r.default.createElement("h1",null,"TEsting")};t.default=a,e.exports=t.default}});
-//# sourceMappingURL=component---src-templates-product-js-517e570f413a69c71f86.js.map

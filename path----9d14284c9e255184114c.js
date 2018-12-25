@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{106:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Millen Enterprises",menu:[{key:"home",title:"Home",url:"#home",type:"scroll-link"},{key:"about",title:"About",url:"#about",type:"scroll-link"},{key:"product",title:"Products",url:"/products",type:"link"},{key:"contact",title:"Contact",url:"#contact",type:"scroll-link"}]}}},layoutContext:{}}}});
-//# sourceMappingURL=path----9d14284c9e255184114c.js.map
