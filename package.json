@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "millenenterprises.com",
+  "description": "Site for Millenenterprises",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ayrbox <srdx7@hotmail.com>",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "gatsby": "^2.0.76",
