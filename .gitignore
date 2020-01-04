@@ -7,3 +7,6 @@ yarn-error.log
 /public
 .DS_Store
 *.swp
+
+yarn.lock
+package-lock.json
