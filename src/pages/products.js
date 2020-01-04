@@ -57,6 +57,7 @@ const Products = () => (
                   paddingBottom: '20px',
                   marginBottom: '20px',
                 }}
+                key={node.fields.slug}
               >
                 <div className={index % 2 === 0 ? 'col-md-7 order-md-2' : 'col-md-7'}>
                   <h2 className="featurette-heading">{node.frontmatter.title}</h2>
