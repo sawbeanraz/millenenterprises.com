@@ -25,9 +25,14 @@ export default class Header extends React.Component {
 
   render() {
     const { isAffix } = this.state;
-    const { siteTitle, siteMenu } = this.props;
+    const {
+      siteTitle,
+      siteMenu,
+      showNavigation,
+      fixed,
+    } = this.props;
     return (
-      <nav className={isAffix ? 'site-navigation affix py-1' : 'site-navigation py-1'}>
+      <nav className={isAffix || fixed ? 'site-navigation affix py-1' : 'site-navigation py-1'}>
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-5 pt-3 pb-3">
@@ -36,7 +41,7 @@ export default class Header extends React.Component {
                 {siteTitle}
               </Link>
             </div>
-            {siteMenu && (
+            {siteMenu && showNavigation && (
               <div className="col-5 pt-3 pb-3 d-flex flex-column flex-md-row justify-content-between">
                 {siteMenu.map(item => (
                   (item.type === 'link') ? (
@@ -77,4 +82,11 @@ Header.propTypes = {
       type: PropTypes.string,
     }),
   ).isRequired,
+  showNavigation: PropTypes.bool,
+  fixed: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  showNavigation: true,
+  fixed: false,
 };

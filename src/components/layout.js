@@ -6,7 +6,7 @@ import Header from './header';
 import Footer from './footer';
 import '../assets/scss/index.scss';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, showNavigation, fixedNav }) => (
   <StaticQuery
     query={graphql`
        query LayoutQuery {
@@ -35,6 +35,8 @@ const Layout = ({ children }) => (
         <Header
           siteTitle={site.siteMetadata.title}
           siteMenu={site.siteMetadata.menu}
+          showNavigation={showNavigation}
+          fixed={fixedNav}
         />
         {children}
         <Footer />
@@ -45,6 +47,13 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  showNavigation: PropTypes.bool,
+  fixedNav: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  showNavigation: true,
+  fixedNav: false,
 };
 
 export default Layout;

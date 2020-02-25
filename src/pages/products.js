@@ -2,18 +2,9 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import Jumbotorn from '../components/jumbotron';
-
-import heroImage from '../assets/images/main-harimau-banner.jpg';
 
 const Products = () => (
-  <Layout>
-    <Jumbotorn
-      image={heroImage}
-      title="Products"
-      text="Our products"
-      id="home"
-    />
+  <Layout showNavigation={false} fixedNav>
     <section className="page-section" id="products">
       <div className="container">
         <h1>Products</h1>

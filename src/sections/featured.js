@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import kuatDetergentLemon from '../assets/images/products/kuat_detergent_lemonzest.png';
 import kuatWashingLemon from '../assets/images/products/kuat_washing_paste_lemon.png';
@@ -61,6 +62,17 @@ const Featured = () => (
             src={kuatWashingLemon}
             data-holder-rendered="true"
           />
+        </div>
+      </div>
+      <hr className="featurette-divider" />
+      <div className="row justify-content-end">
+        <div className="col-md-3 col-sm-4">
+          <Link
+            to="/products"
+            className="btn btn-primary btn-lg btn-block"
+          >
+            More Products &raquo;
+          </Link>
         </div>
       </div>
     </div>
