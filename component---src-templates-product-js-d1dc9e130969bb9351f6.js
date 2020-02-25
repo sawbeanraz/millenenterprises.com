@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{Dltz:function(n,t,e){"use strict";e.r(t);var u=e("q1tI"),a=e.n(u);t.default=function(){return a.a.createElement("h1",null,"TEsting")}}}]);
+//# sourceMappingURL=component---src-templates-product-js-d1dc9e130969bb9351f6.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/templates/product.js"],"names":["Product"],"mappings":"2FAAA,gCAMeA,UAJC,kBACd","file":"component---src-templates-product-js-d1dc9e130969bb9351f6.js","sourcesContent":["import React from 'react';\n\nconst Product = () => (\n  <h1>TEsting</h1>\n);\n\nexport default Product;\n"],"sourceRoot":""}
