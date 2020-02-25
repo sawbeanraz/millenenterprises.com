@@ -17,8 +17,8 @@ module.exports = {
       {
         key: 'product',
         title: 'Products',
-        url: '/products',
-        type: 'link',
+        url: '#products',
+        type: 'scroll-link',
       },
       {
         key: 'contact',
