@@ -1,33 +1,41 @@
 import React from 'react';
-import Carousel from '../components/carousel';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
-import bigmartImage from '../assets/images/clients/bigmart.png';
-import salesberryImage from '../assets/images/clients/salesberry.jpg';
-import salewaysImage from '../assets/images/clients/saleways.png';
+const Clients = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      logos: allFile(filter: { sourceInstanceName: { eq: "client-logos" } }) {
+        nodes {
+          id
+          childImageSharp {
+            fixed(height: 200, width: 200, fit: CONTAIN) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  `);
 
+  // simplyfy images list
+  const logos = data.logos.nodes.map(({ id, childImageSharp }) => ({
+    id,
+    fixed: childImageSharp.fixed,
+  }));
 
-const clients = [{
-  key: 'bigmart',
-  title: 'Big Mart Supermarket',
-  image: bigmartImage,
-}, {
-  key: 'salesberry',
-  title: 'Sales Berry',
-  image: salesberryImage,
-}, {
-  key: 'saleways',
-  title: 'Saleways',
-  image: salewaysImage,
-}];
-
-
-const Clients = () => (
-  <section className="page-section">
-    <div className="container">
-      <h1>Our Clients</h1>
-      <Carousel items={clients} />
-    </div>
-  </section>
-);
+  return (
+    <section className="page-section">
+      <div className="container">
+        <h1>Our Clients</h1>
+        <div className="col-12 pt-3 pb-3 d-flex flex-column flex-md-row justify-content-around">
+          {logos.map(({ id, fixed }) => (
+            <Img id={id} fixed={fixed} alt="Client Logo" />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Clients;

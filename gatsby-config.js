@@ -66,6 +66,13 @@ module.exports = {
         path: `${__dirname}/src/assets/images/banners`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'client-logos',
+        path: `${__dirname}/src/assets/images/clients`,
+      },
+    },
   ],
   pathPrefix: '/millenenterprises.com',
 };
