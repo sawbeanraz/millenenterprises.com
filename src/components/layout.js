@@ -35,8 +35,8 @@ const Layout = ({ children, showNavigation, fixedNav, title }) => (
           ]}
         />
         <Header
-          siteTitle={site.siteMetadata.title}
-          siteMenu={site.siteMetadata.menu}
+          siteTitle={site.meta.title}
+          siteMenu={site.meta.menu}
           showNavigation={showNavigation}
           fixed={fixedNav}
         />

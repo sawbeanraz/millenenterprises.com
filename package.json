@@ -18,7 +18,8 @@
     "react": "^16.7.0",
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-dom": "^16.7.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "reactstrap": "^8.4.1"
   },
   "keywords": [
     "gatsby"
@@ -27,7 +28,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "fix": "eslint --env browser --env node 'src/**/*.js'",
+    "fix": "eslint --env browser --env node 'src/**/*.js' --fix",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build && echo \"millenenterprises.com\" > ./public/CNAME && gh-pages -d public"
@@ -39,6 +40,7 @@
     "eslint-plugin-react": "^7.18.3",
     "gatsby-plugin-eslint": "^2.0.1",
     "gh-pages": "^2.2.0",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "prettier-eslint": "^9.0.1"
   }
 }

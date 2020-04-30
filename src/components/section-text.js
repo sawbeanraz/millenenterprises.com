@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SectionText = ({
-  id,
-  title,
-  content,
-  shaded,
+  id, title, content, shaded,
 }) => (
   <section className={shaded ? 'page-section grey' : 'page-section'} id={id}>
     <div className="container">
