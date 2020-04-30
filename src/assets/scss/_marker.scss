@@ -1,0 +1,24 @@
+$markerWidth: 49px;
+$markerHeight: 64px;
+
+$originX: $markerWidth * 0.5;
+$originY: $markerHeight;
+
+.marker {
+  background-image: url("../images/mapIcons.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+  width: $markerWidth;
+  height: $markerHeight;
+  top: -$originY;
+  left: -$originX;
+  transform-origin: $originX $originY;
+  margin: 0;
+  padding: 0;
+
+  &-text {
+    margin-top: $markerHeight;
+    width: 200px;
+  }
+}

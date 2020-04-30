@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import SectionText from '../components/section-text';
 
 import Clients from '../sections/clients';
-import Map from '../sections/map';
+import Map from '../sections/Map';
 import Banners from '../components/Banners';
 import Products from '../sections/Products';
 
