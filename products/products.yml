@@ -1,0 +1,69 @@
+- name: Kuat Harimau Detergent
+  image: images/kuat_detergent_lemonzest.png
+  description: >
+    With Colour Safe Oxygen Cleaning Power, it helps to oxidise and remove stubborn stains without any damaging effect
+    on your clothes. It also protects your coloured clothes by staying brighter.
+  details:
+    Variant: Zesty Lemon, Spring Floral, Zingy Lime, Aromatherapy
+
+- name: Kuat Harimau Dishwashing Paste
+  image: images/kuat_washing_paste_lemon.png
+  description: >
+    Suitable for all types of dishes and cooking utensils. Effective in removing all types of grime and grease
+    especially on pots and pans.
+
+    Apart from the conventional Lemon and Lime variants, Kuat Harimau has added two revolutionary innovations - with
+    natural micro scrubbers (baking soda) and with natural power cleaner (vinegar).
+  details:
+    Variant: Lemon Zap
+
+- name: Anchor powder detergent
+  image: images/anchor_detergent.jpg
+  description: Anchor powder detergent
+  details:
+    Variant: Citrus, Fresh scent
+    Weight: 4 kg, 2.5kg
+  price: Rs 920, Rs 520
+
+- name: "Ava Fabric Softner"
+  image: images/ava_fabric_softner.jpg
+  description: Gentle on fabrics.Fragrance lasts upto 14 days .reduces crinkles eases ironing, ultra softness,long lasting fragnance,Eliminates Static cling
+  details:
+    Weight: 1 liter
+    Variant: Aromatherapy,sensous Floral,Spring Bouquet
+
+- name: "K1000 Plus"
+  image: images/k1000.png
+  description: K1000 Plus detergent powder
+
+- name: Kuat Harimau bleach
+  image: images/oxi-bleach.jpg
+  details:
+    Variant: Lemon,Regular
+    Weight: 500 ml 900 ml
+    Usage: Used for cleaning kitchen bathroom floors and walls
+  price: Rs:115(500ml), Rs 195(900ml)
+
+- name: Kuat Harimau - Super-K
+  image: images/superk.jpg
+  description: Super Clean Innovative Cleaning Formula.
+
+- name: Mind & Spirit Dish Wash Liquid
+  image: images/mind-n-sprit.jpg
+  description: >
+    Mind & Spirit dish Wash Liquid 500 ml & 1L
+    gentle on hands,degreases dishes effectively,easy to rinse,
+    with aloe vera extract
+  price: Rs 180(500ml), Rs 290(1L)
+
+- name: Win Dishwash Liquid
+  image: images/win-dish-wash.jpg
+  details:
+    Weight: 5 litrer
+    Variant: Cool lime
+
+- name: Win Dishwash Liquid
+  image: images/win-dish-wash.jpg
+  details:
+    Weight: 5 litrer
+    Variant: Cool lime

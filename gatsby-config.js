@@ -73,6 +73,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images/clients`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'products',
+        path: `${__dirname}/products`,
+      },
+    },
+    'gatsby-transformer-yaml',
   ],
   pathPrefix: '/millenenterprises.com',
 };

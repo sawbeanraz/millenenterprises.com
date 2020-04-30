@@ -4,9 +4,9 @@ import Layout from '../components/layout';
 import SectionText from '../components/section-text';
 
 import Clients from '../sections/clients';
-import Featured from '../sections/featured';
 import Map from '../sections/map';
 import Banners from '../components/Banners';
+import Products from '../sections/Products';
 
 const IndexPage = () => (
   <Layout title="Home">
@@ -24,7 +24,7 @@ const IndexPage = () => (
         </p>`}
       id="about"
     />
-    <Featured />
+    <Products />
     <Map />
     <Clients />
   </Layout>

@@ -30,7 +30,7 @@ const Clients = () => {
         <h1>Our Clients</h1>
         <div className="col-12 pt-3 pb-3 d-flex flex-column flex-md-row justify-content-around">
           {logos.map(({ id, fixed }) => (
-            <Img id={id} fixed={fixed} alt="Client Logo" />
+            <Img key={id} fixed={fixed} alt="Client Logo" />
           ))}
         </div>
       </div>
