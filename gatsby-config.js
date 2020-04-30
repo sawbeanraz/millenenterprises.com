@@ -41,8 +41,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
+        name: 'products',
+        path: `${__dirname}/src/products`,
       },
     },
     'gatsby-plugin-sharp',
@@ -57,6 +57,13 @@ module.exports = {
           emitWarning: true,
           failOnError: false,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'banners',
+        path: `${__dirname}/src/assets/images/banners`,
       },
     },
   ],

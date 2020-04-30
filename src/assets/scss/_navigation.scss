@@ -1,31 +1,26 @@
-.site-navigation { 
+.site-navigation {
   position: fixed;
-  top:0;
-  right:0;
-  left:0;
-  transition: all .3s ease-in-out;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
   border-radius: 0;
   z-index: 9999;
-  background-color: transparent;
-
+  background-color: rgba(0, 0, 0, 0.3);
 
   &.affix {
-    background-color: #19505B;
-    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    background-color: #19505b;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
-
 }
-
-
 
 /**
  * navigation bar logo link and image 
  */
 
-
 .nav-logo-link {
   color: #fff;
-  text-decoration: none;  
+  text-decoration: none;
   font: {
     size: 32px;
     weight: bold;
@@ -41,16 +36,16 @@
   }
 }
 
-
 /**
  * Navigation Items */
 
 .nav-item {
-  margin-top: 18px;  
+  margin-top: 18px;
   margin-bottom: 18px;
   color: #fff;
 
-  &:hover, &:focus { 
+  &:hover,
+  &:focus {
     text-decoration: none;
     color: #fff;
     border-bottom: 2px solid #fff;

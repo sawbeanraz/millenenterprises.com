@@ -1,23 +1,16 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import Jumbotorn from '../components/jumbotron';
 import SectionText from '../components/section-text';
 
 import Clients from '../sections/clients';
 import Featured from '../sections/featured';
 import Map from '../sections/map';
-
-import heroImage from '../assets/images/main-harimau-banner.jpg';
+import Banners from '../components/Banners';
 
 const IndexPage = () => (
   <Layout title="Home">
-    <Jumbotorn
-      image={heroImage}
-      title="Kuat Harimau"
-      text="Delivered by Millen Enterprises"
-      id="home"
-    />
+    <Banners />
     <SectionText
       title="About"
       shaded={false}

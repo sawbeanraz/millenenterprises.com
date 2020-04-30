@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&subset=devanagari,latin-ext");
 
-
-@import '~bootstrap/scss/bootstrap.scss';
-
-
+@import "~bootstrap/scss/bootstrap.scss";
 
 //TODO: Update default variable of bootstrap
 body {
   font-family: "Poppins", sans-serif;
 }
 
-
-@import 'navigation';
-@import 'footer';
-@import 'jumbotorn';
-@import 'page-section';
-@import 'carousel';
+@import "navigation";
+@import "banners";
+@import "footer";
+@import "jumbotorn";
+@import "page-section";
+@import "carousel";
