@@ -11,7 +11,7 @@ import Map from '../sections/map';
 import heroImage from '../assets/images/main-harimau-banner.jpg';
 
 const IndexPage = () => (
-  <Layout>
+  <Layout title="Home">
     <Jumbotorn
       image={heroImage}
       title="Kuat Harimau"

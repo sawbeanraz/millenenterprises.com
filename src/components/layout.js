@@ -6,27 +6,29 @@ import Header from './header';
 import Footer from './footer';
 import '../assets/scss/index.scss';
 
-const Layout = ({ children, showNavigation, fixedNav }) => (
+const Layout = ({ children, showNavigation, fixedNav, title }) => (
   <StaticQuery
     query={graphql`
-       query LayoutQuery {
-         site {
-           siteMetadata {
-             title,
-             menu {
-               key
-               title
-               url
-               type
-             }
-           }
-         }
-       }
+      query LayoutQuery {
+        site {
+          meta: siteMetadata {
+            title
+            menu {
+              key
+              title
+              url
+              type
+            }
+          }
+        }
+      }
     `}
     render={({ site }) => (
       <Fragment>
         <Helmet
-          defaultTitle={site.siteMetadata.title}
+          defaultTitle={
+            title ? `${title} | ${site.meta.title}` : site.meta.title
+          }
           meta={[
             { name: 'description', content: 'millen enterprises' },
             { name: 'keywords', content: 'kuat harimau, millenenterprises' },
@@ -49,11 +51,13 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   showNavigation: PropTypes.bool,
   fixedNav: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 Layout.defaultProps = {
   showNavigation: true,
   fixedNav: false,
+  title: '',
 };
 
 export default Layout;
