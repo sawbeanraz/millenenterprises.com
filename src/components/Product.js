@@ -49,7 +49,7 @@ Product.propTypes = {
 
 export default Product;
 
-export const prodctFragment = graphql`
+export const productFragment = graphql`
   fragment ProductDetails on ProductsYaml {
     id
     name
