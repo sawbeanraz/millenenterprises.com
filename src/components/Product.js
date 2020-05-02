@@ -25,6 +25,9 @@ const Product = ({ product }) => {
         }
       }}
       className="product-link"
+      state={{
+        modal: true,
+      }}
     >
       <div className="product">
         <Img fluid={{ ...small }} className="product-image" />

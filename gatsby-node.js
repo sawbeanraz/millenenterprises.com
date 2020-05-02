@@ -4,45 +4,38 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const { createFilePath } = require('gatsby-source-filesystem');
+const { slash } = require('gatsby-core-utils');
 const path = require('path');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    });
-  }
-};
-
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
-  return new Promise((resolve) => {
-    graphql(`{
-      allMarkdownRemark {
+
+  const result = await graphql(`
+    {
+      products: allProductsYaml(limit: 100) {
         edges {
-          node {
-            fields {
-              slug
-            }
+          product: node {
+            id
           }
         }
       }
-    }`).then(({ data }) => {
-      data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve('./src/templates/product.js'),
-          context: {
-            slug: node.fields.slug,
-          },
-        });
-      });
-      resolve();
+    }
+  `);
+
+  if (result.errors) {
+    reporter.panicOnBuild('Error while running GraphQL query.');
+    return;
+  }
+
+  const productDetailTemplate = path.resolve('src/templates/product-detail.js');
+
+  result.data.products.edges.forEach(({ product }) => {
+    createPage({
+      path: `/product/${product.id}/`,
+      component: slash(productDetailTemplate),
+      context: {
+        id: product.id,
+      },
     });
   });
 };

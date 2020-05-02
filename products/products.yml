@@ -25,14 +25,14 @@
     Weight: 4 kg, 2.5kg
   price: Rs 920, Rs 520
 
-- name: "Ava Fabric Softner"
+- name: 'Ava Fabric Softner'
   image: images/ava_fabric_softner.jpg
   description: Gentle on fabrics.Fragrance lasts upto 14 days .reduces crinkles eases ironing, ultra softness,long lasting fragnance,Eliminates Static cling
   details:
     Weight: 1 liter
     Variant: Aromatherapy,sensous Floral,Spring Bouquet
 
-- name: "K1000 Plus"
+- name: 'K1000 Plus'
   image: images/k1000.png
   description: K1000 Plus detergent powder
 

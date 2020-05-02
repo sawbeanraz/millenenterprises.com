@@ -38,13 +38,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'products',
-        path: `${__dirname}/src/products`,
-      },
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
@@ -81,6 +74,37 @@ module.exports = {
       },
     },
     'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-plugin-modal-routing',
+      options: {
+        modalProps: {
+          style: {
+            overlay: {
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.75)',
+              zIndex: 99999,
+            },
+            content: {
+              position: 'absolute',
+              border: 'none',
+              background: 'none',
+              padding: 0,
+              top: 0,
+              bottom: 0,
+              right: 0,
+              left: 0,
+              overflow: 'auto',
+              WebkitOverflowScrolling: 'touch',
+            },
+          },
+          contentLabel: 'Modal',
+        },
+      },
+    },
   ],
   pathPrefix: '/millenenterprises.com',
 };
