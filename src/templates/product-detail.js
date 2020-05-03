@@ -11,37 +11,25 @@ const ProductDetail = ({ data }) => {
   return (
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (
-        <div
-          style={{
-            display: 'flex',
-            positon: 'relative',
-            height: '100vh',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: 'auto',
-              width: '100%',
-            }}
-          >
-            <div style={{ backgroundColor: '#fff', maxWidth: '500px' }}>
-              <Img fluid={{ ...small }} className="product-image" />
-
-              <h1>{name}</h1>
-              <p className="lead">{description}</p>
-              {modal && <p>This is modal</p>}
-
-              <Link
-                to={closeTo}
-                state={{
-                  noScroll: true,
-                }}
-              >
-                Close [x]
-              </Link>
+        <div className="modal-product-wrapper">
+          <div className="modal-product">
+            <div className="modal-product-content">
+              <div className="product-image">
+                <Img fluid={{ ...small }} />
+              </div>
+              <div className="product-description">
+                <h1>{name}</h1>
+                <p className="lead">{description}</p>
+                {/* {modal && <p>This is modal</p>} */}
+                <Link
+                  to={closeTo}
+                  state={{
+                    noScroll: true,
+                  }}
+                >
+                  Close [x]
+                </Link>
+              </div>
             </div>
           </div>
         </div>

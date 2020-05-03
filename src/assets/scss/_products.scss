@@ -63,3 +63,34 @@
     }
   }
 }
+
+.modal-product-wrapper {
+  display: flex;
+  position: relative;
+  height: 100vh;
+
+  .modal-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .modal-product-content {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    .product-description {
+      padding: 1.4rem;
+    }
+
+    .product-image {
+      display: block;
+      width: 400px;
+    }
+  }
+}
