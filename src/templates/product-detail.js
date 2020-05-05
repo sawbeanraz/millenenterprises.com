@@ -14,9 +14,6 @@ const ProductDetail = ({ data }) => {
         <div className="modal-product-wrapper">
           <div className="modal-product">
             <div className="modal-product-content">
-              <div className="product-image">
-                <Img fluid={{ ...small }} />
-              </div>
               <div className="product-description">
                 <h1>{name}</h1>
                 <p className="lead">{description}</p>
@@ -29,6 +26,11 @@ const ProductDetail = ({ data }) => {
                 >
                   Close [x]
                 </Link>
+              </div>
+              <div className="product-image">
+                <div className="product-image-wrapper">
+                  <Img fluid={small} className="product-image-tag" />
+                </div>
               </div>
             </div>
           </div>

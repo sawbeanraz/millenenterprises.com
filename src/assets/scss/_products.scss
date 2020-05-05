@@ -75,6 +75,7 @@
     justify-content: center;
     margin: auto;
     width: 100%;
+    max-width: 56.35rem;
   }
 
   .modal-product-content {
@@ -83,14 +84,38 @@
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+    flex-direction: row-reverse;
+    width: 100%;
 
     .product-description {
       padding: 1.4rem;
+      padding-bottom: 0;
+      width: 18.2rem;
     }
 
     .product-image {
       display: block;
-      width: 400px;
+      background-color: lightgray;
+      flex: 1 0 0%;
+      width: 100%;
+      position: relative;
+    }
+
+    .product-image-wrapper {
+      position: relative;
+      padding-bottom: 100%;
+      overflow: hidden;
+    }
+    .product-image-tag {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      vertical-align: baseline;
+      position: absolute !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 }
