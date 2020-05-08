@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import {
-  Carousel, CarouselItem, CarouselControl, CarouselIndicators,
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
 } from 'reactstrap';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
@@ -47,12 +50,28 @@ const CarouselWrapper = () => {
 
   return (
     <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-      <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
+      <CarouselIndicators
+        items={images}
+        activeIndex={activeIndex}
+        onClickHandler={goToIndex}
+      />
       {images.map(img => (
-        <CarouselItem key={img.id} className="main-banner-item" tag={CustomSliderItem(img.fluid)} />
+        <CarouselItem
+          key={img.id}
+          className="main-banner-item"
+          tag={CustomSliderItem(img.fluid)}
+        />
       ))}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
     </Carousel>
   );
 };

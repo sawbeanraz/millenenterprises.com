@@ -6,7 +6,9 @@ import Header from './header';
 import Footer from './footer';
 import '../assets/scss/index.scss';
 
-const Layout = ({ children, showNavigation, fixedNav, title }) => (
+const Layout = ({
+  children, showNavigation, fixedNav, title,
+}) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {

@@ -26,13 +26,16 @@ export default class Header extends React.Component {
   render() {
     const { isAffix } = this.state;
     const {
-      siteTitle,
-      siteMenu,
-      showNavigation,
-      fixed,
+      siteTitle, siteMenu, showNavigation, fixed,
     } = this.props;
     return (
-      <nav className={isAffix || fixed ? 'site-navigation affix py-1' : 'site-navigation py-1'}>
+      <nav
+        className={
+          isAffix || fixed
+            ? 'site-navigation affix py-1'
+            : 'site-navigation py-1'
+        }
+      >
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-5 pt-3 pb-3">
@@ -43,26 +46,20 @@ export default class Header extends React.Component {
             </div>
             {siteMenu && showNavigation && (
               <div className="col-5 pt-3 pb-3 d-flex flex-column flex-md-row justify-content-between">
-                {siteMenu.map(item => (
-                  (item.type === 'link') ? (
-                    <Link
-                      key={item.key}
-                      to={item.url}
-                      className="nav-item"
-                    >
-                      {item.title}
-                    </Link>
-                  ) : (
-                    <AnchorLink
-                      offset={100}
-                      className="nav-item"
-                      key={item.key}
-                      href={item.url}
-                    >
-                      {item.title}
-                    </AnchorLink>
-                  )
-                ))}
+                {siteMenu.map(item => (item.type === 'link' ? (
+                  <Link key={item.key} to={item.url} className="nav-item">
+                    {item.title}
+                  </Link>
+                ) : (
+                  <AnchorLink
+                    offset={100}
+                    className="nav-item"
+                    key={item.key}
+                    href={item.url}
+                  >
+                    {item.title}
+                  </AnchorLink>
+                )))}
               </div>
             )}
           </div>

@@ -27,7 +27,11 @@ const ProductDetail = ({ data }) => {
                 <p>{description}</p>
                 {price && <strong>{price}</strong>}
                 {Object.keys(productDetails).map(detailKey => (
-                  <p key={detailKey}>{`${detailKey} : ${productDetails[detailKey]}`}</p>
+                  <p
+                    key={detailKey}
+                  >
+                    {`${detailKey} : ${productDetails[detailKey]}`}
+                  </p>
                 ))}
               </div>
               <div className="product-image">

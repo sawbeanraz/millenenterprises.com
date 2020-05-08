@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 const Jumbotorn = ({
-  image,
-  title,
-  text,
-  id,
+  image, title, text, id,
 }) => (
   <section
     className="jumbotorn"

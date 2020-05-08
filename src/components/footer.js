@@ -22,9 +22,7 @@ const Footer = () => (
             Nepal
           </address>
           <div>
-            <a href="tel:+97715534106">
-              +977 1 5534106
-            </a>
+            <a href="tel:+97715534106">+977 1 5534106</a>
           </div>
           <div>
             <a href="mailto:sushila.maharjan@gmail.com">
@@ -38,7 +36,8 @@ const Footer = () => (
       <div className="container">
         &copy; Copyright &nbsp;
         <span id="copyrightYear">{new Date().getFullYear()}</span>
-        . All right reserve.
+        . All right
+        reserve.
       </div>
     </div>
   </div>
