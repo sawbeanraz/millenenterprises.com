@@ -4,24 +4,31 @@ import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { FaCaretLeft, FaCaretRight, FaTimes } from 'react-icons/fa';
+import pickBy from 'lodash/pickBy';
 
 const ProductDetail = ({ data }) => {
   const { product } = data;
   const {
-    smallImage, description, name, price,
+    smallImage, description, name, price, details = {},
   } = product;
   const { small } = smallImage.childImageSharp;
+
+  const productDetails = pickBy(details, d => !!d);
+
   return (
     <ModalRoutingContext.Consumer>
-      {({ modal, closeTo }) => (
+      {({ closeTo }) => (
         <div className="modal-product-wrapper">
           <div className="modal-product">
             <FaCaretLeft className="product-icons-button" />
             <div className="modal-product-content">
               <div className="product-description">
-                <h5>{name}</h5>
+                <h4>{name}</h4>
                 <p>{description}</p>
                 {price && <strong>{price}</strong>}
+                {Object.keys(productDetails).map(detailKey => (
+                  <p key={detailKey}>{`${detailKey} : ${productDetails[detailKey]}`}</p>
+                ))}
               </div>
               <div className="product-image">
                 <div className="product-image-wrapper">
@@ -53,6 +60,7 @@ ProductDetail.propTypes = {
       name: PropTypes.string.isRequired,
       description: PropTypes.string,
       price: PropTypes.string,
+      details: PropTypes.object,
     }).isRequired,
   }).isRequired,
 };
