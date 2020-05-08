@@ -7,7 +7,9 @@ import { FaCaretLeft, FaCaretRight, FaTimes } from 'react-icons/fa';
 
 const ProductDetail = ({ data }) => {
   const { product } = data;
-  const { smallImage, description, name } = product;
+  const {
+    smallImage, description, name, price,
+  } = product;
   const { small } = smallImage.childImageSharp;
   return (
     <ModalRoutingContext.Consumer>
@@ -17,9 +19,9 @@ const ProductDetail = ({ data }) => {
             <FaCaretLeft className="product-icons-button" />
             <div className="modal-product-content">
               <div className="product-description">
-                <h1>{name}</h1>
-                <p className="lead">{description}</p>
-                {/* {modal && <p>This is modal</p>} */}
+                <h5>{name}</h5>
+                <p>{description}</p>
+                {price && <strong>{price}</strong>}
               </div>
               <div className="product-image">
                 <div className="product-image-wrapper">
@@ -50,6 +52,7 @@ ProductDetail.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string,
+      price: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };
