@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { FaCaretLeft, FaCaretRight, FaTimes } from 'react-icons/fa';
 
 const ProductDetail = ({ data }) => {
   const { product } = data;
@@ -13,19 +14,12 @@ const ProductDetail = ({ data }) => {
       {({ modal, closeTo }) => (
         <div className="modal-product-wrapper">
           <div className="modal-product">
+            <FaCaretLeft className="product-icons-button" />
             <div className="modal-product-content">
               <div className="product-description">
                 <h1>{name}</h1>
                 <p className="lead">{description}</p>
                 {/* {modal && <p>This is modal</p>} */}
-                <Link
-                  to={closeTo}
-                  state={{
-                    noScroll: true,
-                  }}
-                >
-                  Close [x]
-                </Link>
               </div>
               <div className="product-image">
                 <div className="product-image-wrapper">
@@ -33,6 +27,15 @@ const ProductDetail = ({ data }) => {
                 </div>
               </div>
             </div>
+            <FaCaretRight className="product-icons-button" />
+            <Link
+              to={closeTo}
+              state={{
+                noScroll: true,
+              }}
+            >
+              <FaTimes className="product-icons-button close-icon" />
+            </Link>
           </div>
         </div>
       )}

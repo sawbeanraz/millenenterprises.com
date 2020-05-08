@@ -118,4 +118,18 @@
       right: 0;
     }
   }
+
+  .product-icons-button {
+    cursor: pointer;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    user-select: none;
+
+    &.close-icon {
+      font-size: 30px;
+      position: absolute;
+      top: 5rem;
+      right: 5rem;
+    }
+  }
 }
