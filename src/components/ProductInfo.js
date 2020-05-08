@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { FaCaretLeft, FaCaretRight, FaTimes } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import pickBy from 'lodash/pickBy';
 import { Link } from 'gatsby';
 
@@ -16,7 +16,6 @@ const ProductInfo = ({ product, closeTo }) => {
   return (
     <div className="modal-product-wrapper">
       <div className="modal-product">
-        <FaCaretLeft className="product-icons-button" />
         <div className="modal-product-content">
           <div className="product-description">
             <h4>{name}</h4>
@@ -32,7 +31,6 @@ const ProductInfo = ({ product, closeTo }) => {
             </div>
           </div>
         </div>
-        <FaCaretRight className="product-icons-button" />
         <Link
           to={closeTo}
           state={{
