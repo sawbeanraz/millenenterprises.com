@@ -19,7 +19,6 @@ const Layout = ({
               key
               title
               url
-              type
             }
           }
         }
@@ -28,9 +27,7 @@ const Layout = ({
     render={({ site }) => (
       <Fragment>
         <Helmet
-          defaultTitle={
-            title ? `${title} | ${site.meta.title}` : site.meta.title
-          }
+          defaultTitle={title ? `${title} | ${site.meta.title}` : site.meta.title}
           meta={[
             { name: 'description', content: 'millen enterprises' },
             { name: 'keywords', content: 'kuat harimau, millenenterprises' },
